@@ -8,9 +8,10 @@ export default function Navbar() {
 
   return (
     <nav className="bg-gradient-to-r from-red-500 via-yellow-500 to-red-500 text-black shadow-lg py-4 container mx-auto flex-col lg:flex-row flex justify-between items-center px-6 lg:px-12 gap-5 lg:gap-0 rounded-lg">
-      <NavLink to={"/"} className={"text-black hover:text-gray duration-300"}>
-        Food Recipes...{" "}
-      </NavLink>
+      <NavLink
+        to={"/"}
+        className={"text-black hover:text-gray duration-300"}
+      ></NavLink>
 
       <form onSubmit={handleSubmit}>
         <input
@@ -18,7 +19,7 @@ export default function Navbar() {
           name="search"
           value={searchParam}
           onChange={(event) => setSearchParam(event.target.value)}
-          placeholder="Enter items "
+          placeholder="Enter food items "
           className="bg-white/75 p-3 px-8 rounded-full outline-none lg:w-97 shadow-lg shadow-red-100 focus:shadow-red-200"
         ></input>
       </form>
@@ -35,9 +36,7 @@ export default function Navbar() {
           <NavLink
             to={"/Favourites"}
             className={"text-black hover:text-gray duration-300"}
-          >
-           
-          </NavLink>
+          ></NavLink>
         </li>
       </ul>
     </nav>
